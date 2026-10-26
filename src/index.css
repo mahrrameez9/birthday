@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-cursive: 'Alex Brush', cursive;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #09090b;
+    color: #f4f4f5;
+  }
+}
+
+.font-serif-display {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-cursive-calligraphy {
+  font-family: 'Alex Brush', cursive;
+}
+
+/* Shimmer & Glow Effects */
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(2deg);
+  }
+}
+
+@keyframes float-medium {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-24px) rotate(-3deg);
+  }
+}
+
+@keyframes float-reverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(18px) rotate(3deg);
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes flame-flicker {
+  0%, 100% {
+    transform: scale(1) skewX(0deg);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 10px rgba(251, 146, 60, 0.9)) drop-shadow(0 0 25px rgba(239, 68, 68, 0.6));
+  }
+  25% {
+    transform: scale(1.08, 0.95) skewX(-2deg);
+    opacity: 0.88;
+  }
+  50% {
+    transform: scale(0.96, 1.08) skewX(2deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 14px rgba(251, 191, 36, 1)) drop-shadow(0 0 35px rgba(249, 115, 22, 0.7));
+  }
+  75% {
+    transform: scale(1.04, 1.02) skewX(-1deg);
+    opacity: 0.92;
+  }
+}
+
+@keyframes star-twinkle {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes aurora-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 7s ease-in-out infinite;
+}
+
+.animate-float-medium {
+  animation: float-medium 5s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 8s ease-in-out infinite;
+}
+
+.animate-flame {
+  animation: flame-flicker 1.2s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.animate-twinkle {
+  animation: star-twinkle 3s ease-in-out infinite;
+}
+
+.animate-aurora {
+  background-size: 200% 200%;
+  animation: aurora-shift 12s ease infinite;
+}
+
+/* Glassmorphism subtle surface */
+.glass-panel {
+  background: rgba(23, 23, 27, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-panel-glow {
+  background: rgba(28, 25, 33, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(244, 114, 182, 0.2);
+  box-shadow: 0 10px 40px -10px rgba(244, 63, 94, 0.15);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
