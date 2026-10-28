@@ -4,6 +4,11 @@ import { Sparkles, Maximize2, X, Heart } from 'lucide-react';
 import { sound } from '../utils/audio';
 import { burstAt } from '../utils/confetti';
 
+import castleImg from '../assets/images/celestial_starlight_castle_1793032396869.jpg';
+import champagneImg from '../assets/images/luxury_champagne_roses_1793032397866.jpg';
+import lanternsImg from '../assets/images/floating_sky_lanterns_1793032398628.jpg';
+import bouquetImg from '../assets/images/blush_peonies_bouquet_1793032398385.jpg';
+
 interface PhotoItem {
   id: string;
   src: string;
@@ -16,7 +21,7 @@ interface PhotoItem {
 const GALLERY_PHOTOS: PhotoItem[] = [
   {
     id: 'castle',
-    src: '/src/assets/images/celestial_starlight_castle_1793032396869.jpg',
+    src: castleImg,
     title: 'Fairytale Horizons',
     subtitle: 'May your next chapter unfold like the dreamiest, most breathtaking storybook.',
     tag: 'Wonder & Magic',
@@ -24,7 +29,7 @@ const GALLERY_PHOTOS: PhotoItem[] = [
   },
   {
     id: 'champagne',
-    src: '/src/assets/images/luxury_champagne_roses_1793032397866.jpg',
+    src: champagneImg,
     title: 'A Toast to Your Elegance',
     subtitle: 'Here’s to laughter that makes you tear up and celebrations that never fade.',
     tag: 'Joy & Radiance',
@@ -32,7 +37,7 @@ const GALLERY_PHOTOS: PhotoItem[] = [
   },
   {
     id: 'lanterns',
-    src: '/src/assets/images/floating_sky_lanterns_1793032398628.jpg',
+    src: lanternsImg,
     title: 'Wishes Written in the Stars',
     subtitle: 'A thousand lanterns sent to the heavens, each carrying a quiet blessing for you.',
     tag: 'Serenity & Hope',
@@ -40,7 +45,7 @@ const GALLERY_PHOTOS: PhotoItem[] = [
   },
   {
     id: 'bouquet',
-    src: '/src/assets/images/blush_peonies_bouquet_1793032398385.jpg',
+    src: bouquetImg,
     title: 'Bloom with Grace',
     subtitle: 'Gentle like petals, resilient like stems, and radiant like morning sunshine.',
     tag: 'Everlasting Bloom',
